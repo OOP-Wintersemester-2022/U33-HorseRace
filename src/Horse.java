@@ -15,8 +15,7 @@ public class Horse {
         horseCounter++;
         id = horseCounter;
         this.finishListener = finishListener;
-        animatedImage = new AnimatedImage(0, yPos, Config.HORSE_WIDTH, Config.HORSE_HEIGHT,
-                Config.IMAGE_BASE_PATH, Config.FILE_EXTENSION, Config.NUM_OF_FRAMES, Config.FRAME_DELAY);
+        animatedImage = new AnimatedImage(0, yPos, Config.HORSE_WIDTH, Config.HORSE_HEIGHT);
     }
 
     public void draw() {
