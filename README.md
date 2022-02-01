@@ -16,4 +16,7 @@ Ergänzen Sie das Projekt um eine Klasse `AnimatedImage` und ersetzen Sie in der
 In `data/assets` liegen mehrere Bilder. Werden alle Bilder hintereinander abgespielt, sieht es aus, als würde das Pferd tatsächlich Schritte machen.
 Sorgen Sie dafür, dass bei jedem Schritt des Pferdes, das jeweils nächste Image aus dem `data/assets`-Ordner gezeichnet wird.
 
+**Vorsicht!** Wenn bei jedem draw()-Aufruf, ein neues Bild gezeichnet wird, wirkt die Animation zu schnell.
+Verlangsamen Sie das, indem Sie beispielsweise nur bei jedem dritten Aufruf das Bild austauschen.
+
 ![Pferderennen-Advanced-Screen](./docs/HorseraceAdvanced.gif)
