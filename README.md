@@ -18,3 +18,12 @@ In `data/assets` liegen mehrere Bilder. Werden alle Bilder hintereinander abgesp
 
 Ersetzen Sie in der Klasse `Horse`die `Circles` durch `Images`.
 Sorgen Sie dafür, dass bei jedem Schritt des Pferdes, das jeweils nächste Image aus dem `data/assets`-Ordner gezeichnet wird.
+
+
+# Zusatzaufgabe
+
+Ergänzen Sie das Projekt um eine Klasse `AnimatedImage` und ersetzen Sie in der Klasse `Horse` die `Circles` durch ein solches animiertes Bild.
+In `data/assets` liegen mehrere Bilder. Werden alle Bilder hintereinander abgespielt, sieht es aus, als würde das Pferd tatsächlich Schritte machen.
+Sorgen Sie dafür, dass bei jedem Schritt des Pferdes, das jeweils nächste Image aus dem `data/assets`-Ordner gezeichnet wird.
+
+![Pferderennen-Advanced-Screen](./docs/HorseraceAdvanced.gif)
