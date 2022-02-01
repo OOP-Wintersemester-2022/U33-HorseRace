@@ -1,6 +1,3 @@
-import de.ur.mi.oop.colors.Colors;
-import de.ur.mi.oop.graphics.Circle;
-
 import java.util.Random;
 
 public class Horse {
@@ -9,7 +6,7 @@ public class Horse {
 
     private int id;
     private boolean running = true;
-    private Circle circle;
+    private AnimatedImage animatedImage;
     static Random random = new Random();
 
     private FinishListener finishListener;
@@ -18,26 +15,28 @@ public class Horse {
         horseCounter++;
         id = horseCounter;
         this.finishListener = finishListener;
-        circle = new Circle(Config.HORSE_RADIUS, yPos, Config.HORSE_RADIUS, Colors.getRandomColor());
+        animatedImage = new AnimatedImage(0, yPos, Config.HORSE_WIDTH, Config.HORSE_HEIGHT,
+                Config.IMAGE_BASE_PATH, Config.FILE_EXTENSION, Config.NUM_OF_FRAMES, Config.FRAME_DELAY);
     }
 
     public void draw() {
         update();
-        circle.draw();
+        animatedImage.draw();
     }
 
     public void update() {
         if (running) {
             float dx = random.nextInt(Config.MAX_HORSE_SPEED);
-            circle.move(dx, 0);
+            animatedImage.move(dx, 0);
             checkIfFinished();
         }
     }
 
     private void checkIfFinished() {
-        if (circle.getRightBorder() >= Config.CANVAS_WIDTH) {
+        if (animatedImage.getRightBorder() >= Config.CANVAS_WIDTH) {
             finishListener.hasEnteredFinishLine(id);
             running = false;
+            animatedImage.setAnimated(false);
         }
     }
 

@@ -1,4 +1,5 @@
 import de.ur.mi.oop.app.GraphicsApp;
+import de.ur.mi.oop.colors.Colors;
 import de.ur.mi.oop.launcher.GraphicsAppLauncher;
 
 public class HorseRaceApp extends GraphicsApp {
@@ -25,13 +26,14 @@ public class HorseRaceApp extends GraphicsApp {
     private void initHorses() {
         horses = new Horse[Config.NUM_HORSES];
         for (int i = 0; i < horses.length; i++) {
-            float yPos = Config.HORSE_RADIUS + i * (Config.HORSE_RADIUS * 2);
+            float yPos = Config.RACE_TOP_OFFSET + i * Config.HORSE_HEIGHT;
             horses[i] = new Horse(yPos, speaker);
         }
     }
 
     @Override
     public void draw() {
+        drawBackground(Colors.WHITE);
         drawHorses();
         drawSpeakerAnnouncements();
     }
